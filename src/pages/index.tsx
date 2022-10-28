@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import type { HeadFC } from "gatsby"
 import { App, Navbar } from "@common"
 import { BREAKPOINTS, COLORS } from "@constants";
+import { Hero } from "@homepage";
 
 const IndexPage = () => {
    return (
       <App>
          <LandingPage>
             <Navbar />
+            <Hero />
          </LandingPage>
       </App>
    )
