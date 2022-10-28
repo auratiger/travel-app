@@ -1,6 +1,6 @@
 import React from "react"
 import type { HeadFC } from "gatsby"
-import App from "../modules/common/App/App"
+import { App } from "@common"
 
 const IndexPage = () => {
    return (
