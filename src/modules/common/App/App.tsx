@@ -6,15 +6,6 @@ import './reset.css';
 import './fonts.css';
 
 const GlobalStyles = createGlobalStyle`
-
-   :root {
-     --primary: #fb8f1d;
-     --background: #FFFFFF;
-     --primary-text: #202336;
-     --secondary-text: #B8BECD;
-     --transition: 0.3s all ease;
-   }
-
    body {
      -ms-overflow-style: none;  /* IE and Edge */
      scrollbar-width: none;  /* Firefox */
