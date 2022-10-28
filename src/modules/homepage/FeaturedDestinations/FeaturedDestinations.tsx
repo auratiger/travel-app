@@ -16,7 +16,7 @@ const FeaturedDestinations: FC<FeaturedDestinationsProps> = ({ destinations }) =
    return (
       <FeaturedDestinationsWrapper>
          <header>
-            <H1>Featured destinations</H1>
+            <Title>Featured destinations</Title>
             <Link>
                View All <BsChevronRight />
             </Link>
@@ -63,7 +63,7 @@ const FeaturedDestinationsWrapper = styled.section`
    }
 `
 
-const H1 = styled.h1`
+const Title = styled.h2`
   font-size: 2.2rem;
   font-family: "Playfair Display", serif;
 `;

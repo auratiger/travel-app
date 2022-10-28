@@ -124,8 +124,8 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
-  font-size: 1.4rem;
-  margin-bottom: 70px;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
 
   @media screen and ${BREAKPOINTS.sm} {
     & {

@@ -1,14 +1,27 @@
 import React from "react";
-
 import { Button } from "@common";
+
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { BREAKPOINTS } from "@constants";
 
-const InfoSection = () => {
+
+const GuideSection = () => {
    return (
-      <InfoSectionWrapper>
+      <GuideSectionWrapper>
+         <div className="right">
+            <Title>Guides by Thousand Sunny </Title>
+            <div>
+               <P>
+                  Packed with tips and advice from our on-the-ground experts, our city
+                  guides app (iOS and Android) is the ultimate resource before and
+                  during a trip.
+               </P>
+               <Button outlined={false} text="Download" width="160px" />
+            </div>
+         </div>
+
          <motion.div
             initial="hidden"
             whileInView="visible"
@@ -20,46 +33,37 @@ const InfoSection = () => {
             }}
          >
             <div className="left">
-               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={670} />
+               <StaticImage id={'guide-image'} src={'../../../images/Thousand-03.png'} alt="picture" width={670 * 1.4} />
             </div>
          </motion.div>
-         <div className="right">
-            <Title>A new way to explore the world </Title>
-            <div>
-               <P>
-                  For decades travellers have reached for Lonely Planet books when
-                  looking to plan and execute their perfect trip, but now, they can
-                  also let Lonely Planet Experiences lead the way
-               </P>
-               <Button outlined={false} text="Learn More" width="160px" />
-            </div>
-         </div>
-      </InfoSectionWrapper>
+      </GuideSectionWrapper>
    );
 }
 
-const InfoSectionWrapper = styled.section`
-
+const GuideSectionWrapper = styled.section`
    width: 100%;
    padding: 100px 0px;
+
    display: flex;
+   flex: 1;
    align-items: center;
    justify-content: space-between;
    gap: 100px;
+
    scroll-snap-align: start;
 
-   .right {
-      width: 25%;
+   #guide-image {
+      width: 100%;
    }
 
    @media screen and ${BREAKPOINTS.lg} {
-      #info-image {
+      #guide-image {
          width: 400px;
       }
 
       gap: 50px;
 
-      .right {
+      .left{
          width: 50%;
       }
    }
@@ -75,14 +79,14 @@ const InfoSectionWrapper = styled.section`
          width: 100%;
       }
 
-      #info-image {
-         width: 250px;
+      #guide-image {
+         width: 300px;
       }
-   }
+}
 `
 
 const Title = styled.h2`
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-family: "Playfair Display", serif;
   margin-bottom: 20px;
 `;
@@ -90,6 +94,7 @@ const Title = styled.h2`
 const P = styled.p`
   font-size: 1.1rem;
   margin-bottom: 20px;
+  width: 45ch;
 `;
 
-export default InfoSection;
+export default GuideSection;
