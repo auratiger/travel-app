@@ -1,10 +1,13 @@
-import * as React from "react"
+import React from "react"
 import type { HeadFC } from "gatsby"
+import App from "../modules/common/App/App"
 
 const IndexPage = () => {
-  return (
-    <main></main>
-  )
+   return (
+      <App>
+         <main>hello</main>
+      </App>
+   )
 }
 
 export default IndexPage
