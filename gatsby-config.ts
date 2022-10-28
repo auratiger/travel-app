@@ -9,7 +9,12 @@ const config: GatsbyConfig = {
    // If you use VSCode you can also use the GraphQL plugin
    // Learn more at: https://gatsby.dev/graphql-typegen
    graphqlTypegen: true,
-   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
+   plugins: [
+      "gatsby-plugin-styled-components",
+      "gatsby-plugin-image",
+      "gatsby-plugin-sharp",
+      "gatsby-transformer-sharp",
+      "gatsby-transformer-javascript-frontmatter",
       {
          resolve: 'gatsby-source-filesystem',
          options: {
@@ -17,6 +22,14 @@ const config: GatsbyConfig = {
             "path": "./src/images/"
          },
          __key: "images"
+      },
+      {
+         resolve: `gatsby-source-filesystem`,
+         options: {
+            name: `pages`,
+            path: `./src/pages/`,
+         },
+         __key: "pages"
       },
       {
          resolve: "gatsby-plugin-react-svg",

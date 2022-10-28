@@ -1,21 +1,68 @@
-import React from "react"
+import React, { FC } from "react"
 import styled from 'styled-components';
-import type { HeadFC } from "gatsby"
+import { graphql, HeadFC } from "gatsby"
 import { App, Navbar } from "@common"
 import { BREAKPOINTS, COLORS } from "@constants";
-import { Hero, InfoSection } from "@homepage";
+import { FeaturedDestinations, Hero, InfoSection } from "@homepage";
 
-const IndexPage = () => {
+export const frontmatter = {
+   destinations: [
+      {
+         image: "../images/destinations/Raja-Ampat-Islands.jpg",
+         title: "Raja Ampat",
+         text: "Indonesia",
+      },
+      {
+         image: "../images/destinations/Fanjingshan-resize.jpg",
+         title: "Fanjingshan",
+         text: "China",
+      },
+      {
+         image: "../images/destinations/Raja-Ampat-town-resize1.jpg",
+         title: "Raja Ampat",
+         text: "Indonesia",
+      },
+      {
+         image: "../images/destinations/Lake-Skadar-resize.jpg",
+         title: "Skadar",
+         text: "Montenegro",
+      },
+   ]
+}
+
+const IndexPage: FC<any> = ({ data: { javascriptFrontmatter: { frontmatter: destinations } } }) => {
+
+   console.log("hello", destinations);
+
    return (
       <App>
          <Navbar />
          <LandingPage>
             <Hero />
             <InfoSection />
+            <FeaturedDestinations destinations={destinations.destinations} />
          </LandingPage>
       </App>
    )
 }
+
+export const query = graphql`
+  query {
+    javascriptFrontmatter {
+      frontmatter {
+        destinations {
+          text
+          title
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
 
