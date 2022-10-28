@@ -23,7 +23,7 @@ const Button: FC<ButtonProps> = ({ outlined, width, text }) => {
     font-weight: bolder;
     font-size: 1rem;
 
-    padding: 5px 10px;
+    padding: 8px 10px;
     transition: ${TRANSITIONS.md}
 
     ${outlined

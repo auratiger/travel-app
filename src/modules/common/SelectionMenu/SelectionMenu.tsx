@@ -1,4 +1,4 @@
-import { COLORS, TRANSITIONS } from "@constants";
+import { COLORS, TRANSITIONS, Z_INDICES } from "@constants";
 import React, { useState, useRef, FC } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -30,6 +30,7 @@ const SelectionMenu: FC<SelectionMenuProps> = ({ title, items }) => {
             <H1>{title}</H1>
             <BsChevronDown />
          </div>
+
          {opened && (
             <Ul style={{ width: container.current.offsetWidth }}>
                {items.map((item, index) => (
@@ -61,7 +62,7 @@ const H1 = styled.h1`
 
 const Ul = styled.ul`
   position: absolute;
-  z-index: 1;
+  z-index: ${Z_INDICES.hero};
 
   list-style: none;
   margin-top: 20px;

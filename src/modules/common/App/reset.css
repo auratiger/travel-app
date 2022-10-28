@@ -23,7 +23,7 @@ ul[role='list'] {
 }
 
 body {
-   line-height: 1.5;
+   line-height: 1.2;
    text-rendering: optimizeSpeed;
    -webkit-font-smoothing: antialiased;
 }
