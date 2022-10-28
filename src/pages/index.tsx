@@ -1,13 +1,15 @@
 import React from "react"
 import styled from 'styled-components';
 import type { HeadFC } from "gatsby"
-import { App } from "@common"
+import { App, Navbar } from "@common"
 import { BREAKPOINTS, COLORS } from "@constants";
 
 const IndexPage = () => {
    return (
       <App>
-         <LandingPage>hello</LandingPage>
+         <LandingPage>
+            <Navbar />
+         </LandingPage>
       </App>
    )
 }

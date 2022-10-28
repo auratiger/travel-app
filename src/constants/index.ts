@@ -2,7 +2,9 @@ export const COLORS = {
    primary: '#fb8f1d',
    background: '#FFFFFF',
    primaryText: '#202336',
-   secondaryText: ' #B8BECD',
+   secondaryText: '#B8BECD',
+   black: '#000000',
+   gray: '#202336',
 };
 
 export const TRANSITIONS = {
