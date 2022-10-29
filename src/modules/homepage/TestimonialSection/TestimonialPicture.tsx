@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
@@ -10,19 +10,37 @@ import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { BREAKPOINTS, COLORS } from "@constants";
 
+const images = [
+   <StaticImage id={'person-image'} src={'../../../images/young-man.jpg'} alt="person" />,
+   <StaticImage id={'person-image'} src={'../../../images/person.png'} alt="person" />,
+   <StaticImage id={'person-image'} src={'../../../images/solo-traveler.jpg'} alt="person" />,
+]
+
 const TestimonialPicture = () => {
+   const [activeImage, setActiveImage] = useState<number>(0);
+
+   const nextImage = () => {
+      setActiveImage(prev => (prev + 1) % images.length);
+   }
+
+   const prevImage = () => {
+      setActiveImage(prev => ((prev - 1) + images.length) % images.length);
+   }
+
    return (
       <TestimonialPictureWrapper>
-         <Plus id="plus" />
-         <StaticImage id={'person-image'} src={'../../../images/person.png'} alt="person" />
+         {images[activeImage]}
+
          <Controls>
-            <button>
+            <button onClick={prevImage}>
                <BsChevronLeft />
             </button>
-            <button>
+            <button onClick={nextImage}>
                <BsChevronRight />
             </button>
          </Controls>
+
+         <Plus id="plus" />
          <Circle id="circle" />
       </TestimonialPictureWrapper>
    );
