@@ -22,10 +22,10 @@ const FeaturedDestinations: FC<FeaturedDestinationsProps> = ({ destinations }) =
             </Link>
          </header>
 
-         <div className="destinations">
+         <div className="cards">
             {
-               destinations.map(dest => {
-                  return <Destination image={getImage(dest.image)} alt={dest.title} title={dest.title} text={dest.text} delay={0} />
+               destinations.map((dest, index) => {
+                  return <Destination image={getImage(dest.image)} alt={dest.title} title={dest.title} text={dest.text} delay={0.1 * index} />
                })
             }
          </div>
@@ -46,7 +46,7 @@ const FeaturedDestinationsWrapper = styled.section`
       margin-bottom: 50px;
    }
 
-   .destinations {
+   .cards {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -54,7 +54,7 @@ const FeaturedDestinationsWrapper = styled.section`
    }
 
    @media screen and ${BREAKPOINTS.sm} {
-      .destinations {
+      .cards {
          flex-direction: column;
          gap: 20px;
          align-items: center;

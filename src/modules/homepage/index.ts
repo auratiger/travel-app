@@ -3,3 +3,4 @@ export { default as InfoSection } from './InfoSection/InfoSection';
 export { default as FeaturedDestinations } from './FeaturedDestinations/FeaturedDestinations';
 export { default as GuideSection } from './GuideSection/GuideSection';
 export { default as TestimonialSection } from './TestimonialSection/TestimonialSecion';
+export { default as TrendingStoriesSection } from './TrendingSection/TrendingSection';
