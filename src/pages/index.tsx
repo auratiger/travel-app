@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { graphql, HeadFC } from "gatsby"
 import { App, Navbar } from "@common"
 import { BREAKPOINTS, COLORS } from "@constants";
-import { FeaturedDestinations, GuideSection, Hero, InfoSection } from "@homepage";
+import { FeaturedDestinations, GuideSection, Hero, InfoSection, TestimonialSection } from "@homepage";
 
 export const frontmatter = {
    destinations: [
@@ -42,6 +42,7 @@ const IndexPage: FC<any> = ({ data: { javascriptFrontmatter: { frontmatter: dest
             <InfoSection />
             <FeaturedDestinations destinations={destinations.destinations} />
             <GuideSection />
+            <TestimonialSection />
          </LandingPage>
       </App>
    )

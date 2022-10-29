@@ -5,6 +5,7 @@ export const COLORS = {
    secondaryText: '#B8BECD',
    black: '#000000',
    gray: '#202336',
+   accent: '#ffbb0c',
 };
 
 export const TRANSITIONS = {

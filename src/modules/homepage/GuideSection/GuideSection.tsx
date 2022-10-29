@@ -82,7 +82,7 @@ const GuideSectionWrapper = styled.section`
       #guide-image {
          width: 300px;
       }
-}
+   }
 `
 
 const Title = styled.h2`
