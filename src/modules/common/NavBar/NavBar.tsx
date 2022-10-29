@@ -5,7 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import { BREAKPOINTS, COLORS, TRANSITIONS, Z_INDICES } from "@constants";
+import { BREAKPOINTS, COLORS, SHADOWS, TRANSITIONS, Z_INDICES } from "@constants";
 
 const Navbar = () => {
    const [opened, setOpened] = useState<boolean>(false);
@@ -73,7 +73,7 @@ const NavbarWrapper = styled.nav`
   padding: 10px 190px;
 
   background: ${COLORS.background};
-  box-shadow: 0px 0px 12px 0px ${COLORS.black};
+   box-shadow: ${SHADOWS.md};
   transition: ${TRANSITIONS.sm};
 
    div {

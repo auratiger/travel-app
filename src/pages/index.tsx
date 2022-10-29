@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import styled from 'styled-components';
 import { graphql, HeadFC } from "gatsby"
-import { App, Navbar } from "@common"
+import { App, Footer, Navbar } from "@common"
 import { BREAKPOINTS, COLORS } from "@constants";
 import { FeaturedDestinations, GuideSection, Hero, InfoSection, TestimonialSection, TrendingStoriesSection } from "@homepage";
 
@@ -65,6 +65,7 @@ const IndexPage: FC<any> = ({ data: { javascriptFrontmatter: { frontmatter: { de
             <TestimonialSection />
             <TrendingStoriesSection stories={stories} />
          </LandingPage>
+         <Footer />
       </App>
    )
 }

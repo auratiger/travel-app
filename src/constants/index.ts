@@ -5,6 +5,7 @@ export const COLORS = {
    secondaryText: '#B8BECD',
    black: '#000000',
    gray: '#202336',
+   grayLight: 'hsl(236deg 5% 35%)',
    accent: '#ffbb0c',
 };
 
@@ -34,6 +35,10 @@ export const BREAKPOINTS = {
    xlMin: `(min-width: ${BREAKPOINT_SIZES.xl + 1}px)`,
    desktop: `(min-width: ${BREAKPOINT_SIZES.sm + 1}px)`,
 };
+
+export const SHADOWS = {
+   md: `0px 0px 14px -5px ${COLORS.black};`
+}
 
 export const READING_WIDTH = 850;
 export const EXTRA_WIDE_WIDTH = 1024;
