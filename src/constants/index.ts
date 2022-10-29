@@ -1,12 +1,12 @@
 export const COLORS = {
-   primary: '#fb8f1d',
-   background: '#FFFFFF',
-   primaryText: '#202336',
-   secondaryText: '#B8BECD',
-   black: '#000000',
-   gray: '#202336',
+   primary: 'hsl(31deg 97% 55%)',
+   accent: 'hsl(43deg 100% 52%)',
+   background: 'hsl(0deg 0% 100%)',
+   primaryText: 'hsl(232deg 26% 17%)',
+   secondaryText: 'hsl(223deg 17% 76%)',
+   black: 'hsl(0deg 0% 0%)',
+   gray: 'hsl(232deg 26% 17%)',
    grayLight: 'hsl(236deg 5% 35%)',
-   accent: '#ffbb0c',
 };
 
 export const TRANSITIONS = {
