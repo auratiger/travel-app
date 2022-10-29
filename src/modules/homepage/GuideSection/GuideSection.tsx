@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@common";
+import { Button, Title } from "@common";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -84,12 +84,6 @@ const GuideSectionWrapper = styled.section`
       }
    }
 `
-
-const Title = styled.h2`
-  font-size: 2.2rem;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 20px;
-`;
 
 const P = styled.p`
   font-size: 1.1rem;

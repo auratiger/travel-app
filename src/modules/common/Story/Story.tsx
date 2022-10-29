@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { BREAKPOINTS, COLORS, TRANSITIONS } from "@constants";
+import { ImageTitle } from "../Title/Title";
 
 export interface StoryProps {
    image: IGatsbyImageData;
@@ -32,7 +33,7 @@ const Story: FC<StoryProps> = ({ image, alt, title, text, delay }) => {
                alt={alt}
             />
 
-            <Title>{title}</Title>
+            <ImageTitle>{title}</ImageTitle>
             <P>{text}</P>
             <A href="#">Read more</A>
          </motion.div>
@@ -56,10 +57,6 @@ const StoryWrapper = styled.div`
       width: 100%;
    }
 
-`;
-
-const Title = styled.h1`
-   font-size: 1.2rem;
 `;
 
 const P = styled.p`

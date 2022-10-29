@@ -10,6 +10,7 @@ import {
 
 import Logo from "@src/assets/logo.svg";
 import { BREAKPOINTS, COLORS, SHADOWS } from "@constants";
+import { FooterSubTitle, FooterTitle } from "@common";
 
 import styled from "styled-components";
 
@@ -29,28 +30,28 @@ const Footer = () => {
                <small>{`©${year} Thousand Sunny. All rights reserved`}</small>
             </section>
             <section>
-               <Title>Destinations</Title>
-               <SubTitle>Africa</SubTitle>
-               <SubTitle>Antartica</SubTitle>
-               <SubTitle>Asia</SubTitle>
-               <SubTitle>Europe</SubTitle>
-               <SubTitle>America</SubTitle>
+               <FooterTitle>Destinations</FooterTitle>
+               <FooterSubTitle>Africa</FooterSubTitle>
+               <FooterSubTitle>Antartica</FooterSubTitle>
+               <FooterSubTitle>Asia</FooterSubTitle>
+               <FooterSubTitle>Europe</FooterSubTitle>
+               <FooterSubTitle>America</FooterSubTitle>
             </section>
             <section>
-               <Title>Shop</Title>
-               <SubTitle>Destination Guides</SubTitle>
-               <SubTitle>Pictorial & Gifts</SubTitle>
-               <SubTitle>Special Offers</SubTitle>
-               <SubTitle>Delivery Times</SubTitle>
-               <SubTitle>FAQs</SubTitle>
+               <FooterTitle>Shop</FooterTitle>
+               <FooterSubTitle>Destination Guides</FooterSubTitle>
+               <FooterSubTitle>Pictorial & Gifts</FooterSubTitle>
+               <FooterSubTitle>Special Offers</FooterSubTitle>
+               <FooterSubTitle>Delivery Times</FooterSubTitle>
+               <FooterSubTitle>FAQs</FooterSubTitle>
             </section>
             <section>
-               <Title>Interests</Title>
-               <SubTitle>Adventure Travel</SubTitle>
-               <SubTitle>Art And Culture</SubTitle>
-               <SubTitle>Wildlife And Nature</SubTitle>
-               <SubTitle>Family Holidays</SubTitle>
-               <SubTitle>Food And Drink</SubTitle>
+               <FooterTitle>Interests</FooterTitle>
+               <FooterSubTitle>Adventure Travel</FooterSubTitle>
+               <FooterSubTitle>Art And Culture</FooterSubTitle>
+               <FooterSubTitle>Wildlife And Nature</FooterSubTitle>
+               <FooterSubTitle>Family Holidays</FooterSubTitle>
+               <FooterSubTitle>Food And Drink</FooterSubTitle>
             </section>
          </div>
          <div className="icons-container">
@@ -75,7 +76,7 @@ const FooterWrapper = styled.footer`
    box-shadow: ${SHADOWS.md};
 
    .container {
-      padding-top: 90px;
+      padding-block: 2rem;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -116,21 +117,6 @@ const FooterWrapper = styled.footer`
    }
 
 `
-
-const Title = styled.h1`
-   font-size: 1.4rem;
-   margin-bottom: 1rem;
-`;
-
-const SubTitle = styled.h2`
-   font-size: 1.1rem;
-   color: ${COLORS.grayLight};
-   cursor: pointer;
-
-   &:hover {
-      color: ${COLORS.primaryText};
-   }
-`;
 
 const P = styled.p`
    font-size: 1.2rem;

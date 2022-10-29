@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, DatePicker, SelectionMenu } from "@common";
+import { Button, DatePicker, HeroTitle, SelectionMenu, SubTitle } from "@common";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ const Hero = () => {
    return (
       <HeroWrapper>
          <section className="left">
-            <Title>Explore and Travel</Title>
+            <HeroTitle>Explore and Travel</HeroTitle>
 
             <div>
                <SubTitle>Holiday finder</SubTitle>
@@ -110,28 +110,5 @@ const HeroWrapper = styled.section`
       }
    }
 `
-
-const Title = styled.h1`
-  font-size: 4rem;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 90px;
-
-  @media screen and ${BREAKPOINTS.sm} {
-    & {
-      margin-bottom: 40px;
-    }
-  }
-`;
-
-const SubTitle = styled.h2`
-  font-size: 2.2rem;
-  margin-bottom: 35px;
-
-  @media screen and ${BREAKPOINTS.sm} {
-    & {
-      margin-bottom: 20px;
-    }
-  }
-`;
 
 export default Hero;

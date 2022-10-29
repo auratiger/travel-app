@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "@common";
+import { Button, Title } from "@common";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
@@ -80,12 +80,6 @@ const InfoSectionWrapper = styled.section`
       }
    }
 `
-
-const Title = styled.h2`
-  font-size: 2.4rem;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 20px;
-`;
 
 const P = styled.p`
   font-size: 1.1rem;

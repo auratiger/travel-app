@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { Destination } from "@common";
+import { Destination, Title } from "@common";
 import { BREAKPOINTS, COLORS } from "@constants";
 
 import styled from "styled-components";
@@ -62,11 +62,6 @@ const FeaturedDestinationsWrapper = styled.section`
       }
    }
 `
-
-const Title = styled.h2`
-  font-size: 2.2rem;
-  font-family: "Playfair Display", serif;
-`;
 
 const Link = styled.a`
   color: ${COLORS.primary};
