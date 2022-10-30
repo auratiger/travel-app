@@ -1,9 +1,19 @@
 import type { GatsbyConfig } from "gatsby";
 
+const title = process.env.TITLE || 'travel-app'
+const description =
+   process.env.DESCRIPTION || 'Static travel app with to test framer-motion'
+const image = process.env.IMAGE || '/pageImg.png'
+const siteUrl = process.env.URL || 'http://localhost:9000'
+const sitemapName = 'sitemap.xml'
+
 const config: GatsbyConfig = {
    siteMetadata: {
-      title: `travel-app`,
-      siteUrl: `https://www.yourdomain.tld`
+      title: title,
+      description: description,
+      image: image,
+      siteUrl: siteUrl,
+      twitterUsername: `Georgi`,
    },
    // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
    // If you use VSCode you can also use the GraphQL plugin
@@ -15,6 +25,7 @@ const config: GatsbyConfig = {
       "gatsby-plugin-sharp",
       "gatsby-transformer-sharp",
       "gatsby-transformer-javascript-frontmatter",
+      "gatsby-plugin-sitemap",
       {
          resolve: 'gatsby-source-filesystem',
          options: {
@@ -38,7 +49,15 @@ const config: GatsbyConfig = {
                include: /assets/
             }
          }
-      }
+      },
+      {
+         resolve: 'gatsby-plugin-robots-txt',
+         options: {
+            host: siteUrl,
+            sitemap: `${siteUrl}/${sitemapName}`,
+            policy: [{ userAgent: '*', allow: '/' }],
+         },
+      },
    ]
 };
 
