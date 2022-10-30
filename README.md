@@ -7,6 +7,21 @@
   Static travel app design
 </h1>
 
+Mobile Responsive Landing page for tour and travel project. 🌎
+[Design link](https://www.uistore.design/items/tour-and-travel-website-for-figma/)
+
+### ✨ [Demo](https://prod--lustrous-starlight-adb50f.netlify.app)
+
+### 🛠 Tech Stack:
+
+| Frontend           | 
+| -------------      | 
+| React              | 
+| Gatsby             | 
+| Styled-Components  | 
+| Framer Motion      | 
+| React-Icons        |
+
 ## 🚀 Quick start
 
 1.  **Clone source.**
