@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { BREAKPOINTS } from "@constants";
 
+import Plus from "@assets/plus.svg";
+import Circle from "@assets/circle.svg";
+
 const Hero = () => {
    return (
       <HeroWrapper>

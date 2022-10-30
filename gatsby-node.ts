@@ -11,6 +11,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
             "@common": path.resolve(__dirname, "src/modules/common"),
             "@constants": path.resolve(__dirname, "src/constants"),
             "@hooks": path.resolve(__dirname, "src/hooks"),
+            "@assets": path.resolve(__dirname, "src/images/assets"),
             "@mixins": path.resolve(__dirname, "src/mixins"),
          },
       },

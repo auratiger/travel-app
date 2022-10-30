@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
-import Plus from "@src/assets/plus.svg";
-import Circle from "@src/assets/circle.svg";
+import Plus from "@assets/plus.svg";
+import Circle from "@assets/circle.svg";
 
 import { StaticImage } from "gatsby-plugin-image";
 

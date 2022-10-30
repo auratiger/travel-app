@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "@src/assets/logo.svg";
+import Logo from "@assets/logo.svg";
 import { Button } from "@common";
 import { GiHamburgerMenu } from "react-icons/gi";
 

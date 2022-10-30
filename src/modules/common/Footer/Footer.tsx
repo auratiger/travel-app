@@ -8,7 +8,7 @@ import {
    BsYoutube,
 } from "react-icons/bs";
 
-import Logo from "@src/assets/logo.svg";
+import Logo from "@assets/logo.svg";
 import { BREAKPOINTS, COLORS, SHADOWS } from "@constants";
 import { FooterSubTitle, FooterTitle } from "@common";
 
