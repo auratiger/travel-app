@@ -23,16 +23,14 @@ const InfoSection = () => {
                <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={670} placeholder="none" />
             </div>
          </motion.div>
-         <div className="right">
+         <div className="right-container">
             <Title>A new way to explore the world </Title>
-            <div>
-               <P>
-                  For decades travellers have reached for Lonely Planet books when
-                  looking to plan and execute their perfect trip, but now, they can
-                  also let Lonely Planet Experiences lead the way
-               </P>
-               <Button outlined={false} text="Learn More" width="160px" />
-            </div>
+            <P>
+               For decades travellers have reached for Lonely Planet books when
+               looking to plan and execute their perfect trip, but now, they can
+               also let Lonely Planet Experiences lead the way
+            </P>
+            <Button outlined={false} text="Learn More" width="160px" />
          </div>
       </InfoSectionWrapper>
    );
@@ -45,11 +43,13 @@ const InfoSectionWrapper = styled.section`
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 100px;
+   gap: 4rem;
    scroll-snap-align: start;
 
-   .right {
-      width: 25%;
+   .right-container {
+      width: 60ch;
+      display: grid;
+      gap: 1rem;
    }
 
    @media screen and ${BREAKPOINTS.lg} {
@@ -57,9 +57,9 @@ const InfoSectionWrapper = styled.section`
          width: 400px;
       }
 
-      gap: 50px;
+      gap: 3rem;
 
-      .right {
+      .right-container {
          width: 50%;
       }
    }
@@ -67,7 +67,7 @@ const InfoSectionWrapper = styled.section`
    @media screen and ${BREAKPOINTS.sm} {
       flex-direction: column-reverse;
 
-      .right {
+      .right-container {
          width: 100%;
       }
 

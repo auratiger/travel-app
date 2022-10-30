@@ -10,16 +10,14 @@ import { BREAKPOINTS, FONTS, PADDING } from "@constants";
 const GuideSection = () => {
    return (
       <GuideSectionWrapper>
-         <div className="right">
+         <div className="right-container">
             <Title>Guides by Thousand Sunny </Title>
-            <div>
-               <P>
-                  Packed with tips and advice from our on-the-ground experts, our city
-                  guides app (iOS and Android) is the ultimate resource before and
-                  during a trip.
-               </P>
-               <Button outlined={false} text="Download" width="160px" />
-            </div>
+            <P>
+               Packed with tips and advice from our on-the-ground experts, our city
+               guides app (iOS and Android) is the ultimate resource before and
+               during a trip.
+            </P>
+            <Button outlined={false} text="Download" width="160px" />
          </div>
 
          <motion.div
@@ -56,6 +54,12 @@ const GuideSectionWrapper = styled.section`
       width: 100%;
    }
 
+   .right-container {
+      width: 60ch;
+      display: grid;
+      gap: 1rem;
+   }
+
    @media screen and ${BREAKPOINTS.lg} {
       #guide-image {
          width: 400px;
@@ -71,7 +75,7 @@ const GuideSectionWrapper = styled.section`
    @media screen and ${BREAKPOINTS.sm} {
       flex-direction: column-reverse;
 
-      .right {
+      .right-container {
          width: 100%;
       }
 

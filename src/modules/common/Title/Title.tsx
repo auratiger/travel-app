@@ -40,17 +40,13 @@ export const FooterTitle = styled(Title)`
    margin-bottom: 1rem;
 `;
 
-export const FooterSubTitle = styled.h3`
-   font-size: ${FONTS[200]};
-   color: ${COLORS.grayLight};
-   cursor: pointer;
-
-   &:hover {
-      color: ${COLORS.primaryText};
-   }
-`;
-
 export const ImageTitle = styled(SubTitle)`
    font-size: ${FONTS[400]};
    margin-block: 0.5rem;
+`
+
+export const DestinationTitle = styled.h3`
+   font-size: ${FONTS[300]};
+   font-weight: bold;
+   color: ${COLORS.primaryText};
 `

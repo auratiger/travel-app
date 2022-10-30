@@ -2,8 +2,9 @@ import React, { FC } from "react";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { BREAKPOINTS, COLORS, PADDING, TRANSITIONS, Z_INDICES } from "@constants";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { BREAKPOINTS, COLORS, PADDING, TRANSITIONS, Z_INDICES } from "@constants";
+import { DestinationTitle } from "@common";
 
 export interface DestinationProps {
    image: IGatsbyImageData;
@@ -33,7 +34,7 @@ const Destination: FC<DestinationProps> = ({ image, alt, title, text, delay }) =
             />
 
             <Overlay>
-               <H1>{title}</H1>
+               <DestinationTitle>{title}</DestinationTitle>
                <P>{text}</P>
             </Overlay>
          </motion.div>
@@ -70,12 +71,6 @@ const Overlay = styled.div`
 
    z-index: ${Z_INDICES.hero};
    background: ${COLORS.background};
-`;
-
-const H1 = styled.h1`
-   font-size: 1.1rem;
-   font-weight: bold;
-   color: ${COLORS.primaryText};
 `;
 
 const P = styled.p`

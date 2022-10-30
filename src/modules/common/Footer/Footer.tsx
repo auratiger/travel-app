@@ -9,8 +9,8 @@ import {
 } from "react-icons/bs";
 
 import Logo from "@assets/logo.svg";
-import { BREAKPOINTS, COLORS, PADDING, SHADOWS } from "@constants";
-import { FooterSubTitle, FooterTitle } from "@common";
+import { BREAKPOINTS, COLORS, FONTS, PADDING, SHADOWS } from "@constants";
+import { FooterTitle } from "@common";
 
 import styled from "styled-components";
 
@@ -31,27 +31,27 @@ const Footer = () => {
             </section>
             <section>
                <FooterTitle>Destinations</FooterTitle>
-               <FooterSubTitle>Africa</FooterSubTitle>
-               <FooterSubTitle>Antartica</FooterSubTitle>
-               <FooterSubTitle>Asia</FooterSubTitle>
-               <FooterSubTitle>Europe</FooterSubTitle>
-               <FooterSubTitle>America</FooterSubTitle>
+               <Link>Africa</Link>
+               <Link>Antartica</Link>
+               <Link>Asia</Link>
+               <Link>Europe</Link>
+               <Link>America</Link>
             </section>
             <section>
                <FooterTitle>Shop</FooterTitle>
-               <FooterSubTitle>Destination Guides</FooterSubTitle>
-               <FooterSubTitle>Pictorial & Gifts</FooterSubTitle>
-               <FooterSubTitle>Special Offers</FooterSubTitle>
-               <FooterSubTitle>Delivery Times</FooterSubTitle>
-               <FooterSubTitle>FAQs</FooterSubTitle>
+               <Link>Destination Guides</Link>
+               <Link>Pictorial & Gifts</Link>
+               <Link>Special Offers</Link>
+               <Link>Delivery Times</Link>
+               <Link>FAQs</Link>
             </section>
             <section>
                <FooterTitle>Interests</FooterTitle>
-               <FooterSubTitle>Adventure Travel</FooterSubTitle>
-               <FooterSubTitle>Art And Culture</FooterSubTitle>
-               <FooterSubTitle>Wildlife And Nature</FooterSubTitle>
-               <FooterSubTitle>Family Holidays</FooterSubTitle>
-               <FooterSubTitle>Food And Drink</FooterSubTitle>
+               <Link>Adventure Travel</Link>
+               <Link>Art And Culture</Link>
+               <Link>Wildlife And Nature</Link>
+               <Link>Family Holidays</Link>
+               <Link>Food And Drink</Link>
             </section>
          </div>
          <div className="icons-container">
@@ -103,7 +103,7 @@ const FooterWrapper = styled.footer`
    .icons{
       display: flex;
       gap: 20px;
-      font-size: 2.2rem;
+      font-size: ${FONTS[600]};
    }
 
    @media screen and ${BREAKPOINTS.sm} {
@@ -119,8 +119,16 @@ const FooterWrapper = styled.footer`
 `
 
 const P = styled.p`
-   font-size: 1.2rem;
-   color: ${COLORS.grayLight};
+   font-size: ${FONTS[200]};
+   color: ${COLORS.secondaryText};
 `;
+
+const Link = styled(P)`
+   cursor: pointer;
+
+   &:hover {
+      color: ${COLORS.primaryText};
+   }
+`
 
 export default Footer;

@@ -3,7 +3,7 @@ export const COLORS = {
    accent: 'hsl(43deg 100% 52%)',
    background: 'hsl(0deg 0% 100%)',
    primaryText: 'hsl(232deg 26% 17%)',
-   secondaryText: 'hsl(223deg 17% 76%)',
+   secondaryText: 'hsl(223deg 20% 30%)',
    black: 'hsl(0deg 0% 0%)',
    gray: 'hsl(232deg 26% 17%)',
    grayLight: 'hsl(236deg 5% 35%)',

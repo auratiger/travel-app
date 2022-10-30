@@ -100,7 +100,7 @@ const HeroWrapper = styled.section`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      gap: 30px;
+      gap: 2rem;
       width: 100%;
       padding-bottom: 50px;
    }

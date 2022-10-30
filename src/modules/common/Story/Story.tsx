@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { BREAKPOINTS, COLORS, PADDING, TRANSITIONS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS, PADDING, TRANSITIONS } from "@constants";
 import { ImageTitle } from "../Title/Title";
 
 export interface StoryProps {
@@ -55,17 +55,19 @@ const StoryWrapper = styled.div`
    #story-image {
       border-radius: 10px;
       width: 100%;
+      padding-bottom: 1rem;
    }
 
 `;
 
 const P = styled.p`
-   font-size: 1rem;
+   font-size: ${FONTS[200]};
    padding: ${PADDING.md} 0px;
+   color: ${COLORS.secondaryText};
 `;
 
 const A = styled.a`
-   font-size: 1.1rem;
+   font-size: ${FONTS[200]};
    color: ${COLORS.primary};
 `;
 

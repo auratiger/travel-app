@@ -9,25 +9,29 @@ import { Title } from "@common";
 const TestimonialSection = () => {
    return (
       <TestimonialSectionWrapper>
-         <div className="left">
+         <div className="left-container">
             <Title>Testimonials</Title>
 
-            <Stars>
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-            </Stars>
+            <div>
+               <Stars>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+               </Stars>
 
-            <p className="text">
-               “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus
-               ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis
-               nec”
-            </p>
+               <p className="text">
+                  “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus
+                  ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis
+                  nec”
+               </p>
+            </div>
 
-            <h2 className="name">Edward Newgate</h2>
-            <h3 className="role">Founder Circle</h3>
+            <div>
+               <h2 className="name">Edward Newgate</h2>
+               <h3 className="role">Founder Circle</h3>
+            </div>
          </div>
          <TestimonialPicture />
       </TestimonialSectionWrapper>
@@ -44,19 +48,20 @@ const TestimonialSectionWrapper = styled.section`
    justify-content: space-between;
    gap: 10px;
 
-   .left {
+   .left-container {
       width: 60ch;
+      display: grid;
+      gap: 1rem;
    }
 
-   .left h1 {
+   .left-container h1 {
       font-size: ${FONTS[600]};
       font-family: "Playfair Display", serif;
-      padding-bottom: 35px;
    }
 
    .text {
       font-size: ${FONTS[400]};
-      margin-bottom: 50px;
+      margin-bottom: 20px;
    }
 
    .name {
@@ -71,7 +76,7 @@ const TestimonialSectionWrapper = styled.section`
 
 
    @media screen and ${BREAKPOINTS.lg} {
-      .left {
+      .left-container {
          width: 50%;
       }
    }
@@ -80,12 +85,8 @@ const TestimonialSectionWrapper = styled.section`
       flex-direction: column;
       padding: ${PADDING.lg} 0px;
 
-      .left {
+      .left-container {
          width: 100%;
-      }
-
-      .left h1 {
-         padding-bottom: 60px;
       }
 
    }
@@ -95,7 +96,7 @@ const Stars = styled.div`
    display: flex;
    color: ${COLORS.accent};
    font-size: ${FONTS[500]};
-   gap: 10px;
+   gap: 0.8rem;
 `
 
 export default TestimonialSection;

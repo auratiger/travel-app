@@ -1,4 +1,4 @@
-import { COLORS, PADDING, TRANSITIONS, Z_INDICES } from "@constants";
+import { COLORS, FONTS, PADDING, TRANSITIONS, Z_INDICES } from "@constants";
 import React, { useState, useRef, FC } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -27,7 +27,7 @@ const SelectionMenu: FC<SelectionMenuProps> = ({ title, items }) => {
                justifyContent: "space-between",
             }}
          >
-            <H1>{title}</H1>
+            <Placeholder>{title}</Placeholder>
             <BsChevronDown />
          </div>
 
@@ -56,8 +56,9 @@ const Container = styled.div`
   }
 `;
 
-const H1 = styled.h1`
-  font-size: 1rem;
+const Placeholder = styled.p`
+  font-size: ${FONTS[100]};
+  font-weight: bold;
 `;
 
 const Ul = styled.ul`
