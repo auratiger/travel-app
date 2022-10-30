@@ -22,6 +22,10 @@ export const BREAKPOINT_SIZES = {
    xl: 1440,
 };
 
+export const PADDING = {
+   mainInline: "200px"
+}
+
 export const BREAKPOINTS = {
    xs: `(max-width: ${BREAKPOINT_SIZES.xs}px)`,
    sm: `(max-width: ${BREAKPOINT_SIZES.sm}px)`,

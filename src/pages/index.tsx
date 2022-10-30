@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import styled from 'styled-components';
 import { graphql, HeadFC } from "gatsby"
 import { App, Footer, Navbar } from "@common"
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, PADDING } from "@constants";
 import { FeaturedDestinations, GuideSection, Hero, InfoSection, TestimonialSection, TrendingStoriesSection } from "@homepage";
 
 export const frontmatter = {
@@ -102,7 +102,7 @@ export default IndexPage
 
 const LandingPage = styled.main`
    width: 100%;
-   padding: 0px 190px;
+   padding: 0px ${PADDING.mainInline};
    scroll-snap-type: y mandatory;
    background-color: ${COLORS.background};
 
