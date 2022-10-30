@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 
 import styled from "styled-components";
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
 import TestimonialPicture from "./TestimonialPicture";
 
 const TestimonialSection = () => {
@@ -48,23 +48,23 @@ const TestimonialSectionWrapper = styled.section`
    }
 
    .left h1 {
-      font-size: 2.2rem;
+      font-size: ${FONTS[600]};
       font-family: "Playfair Display", serif;
       padding-bottom: 35px;
    }
 
    .text {
-      font-size: 1.4rem;
+      font-size: ${FONTS[400]};
       margin-bottom: 50px;
    }
 
    .name {
-      font-size: 1.4rem;
+      font-size: ${FONTS[400]};
       font-weight: bold;
    }
 
    .role {
-      font-size: 1rem;
+      font-size: ${FONTS[100]};
       color: ${COLORS.secondaryText};
    }
 
@@ -93,7 +93,7 @@ const TestimonialSectionWrapper = styled.section`
 const Stars = styled.div`
    display: flex;
    color: ${COLORS.accent};
-   font-size: 1.6rem;
+   font-size: ${FONTS[500]};
    gap: 10px;
 `
 

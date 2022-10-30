@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { BsChevronRight } from "react-icons/bs";
 
 import { Destination, Title } from "@common";
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
 
 import styled from "styled-components";
 import { getImage } from "gatsby-plugin-image";
@@ -67,7 +67,7 @@ const Link = styled.a`
   color: ${COLORS.primary};
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: ${FONTS[200]};
   font-weight: 1000;
 
   &:hover {

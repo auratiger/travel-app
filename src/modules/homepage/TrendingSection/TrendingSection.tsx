@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
 import { Story } from "@common";
 import { getImage } from "gatsby-plugin-image";
 
@@ -63,7 +63,7 @@ const TrendingStoriesSectionWrapper = styled.section`
 `
 
 const H1 = styled.h1`
-   font-size: 2.2rem;
+   font-size: ${FONTS[600]};
    font-family: "Playfair Display", serif;
 `;
 
