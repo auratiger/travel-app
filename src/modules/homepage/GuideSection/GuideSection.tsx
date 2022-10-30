@@ -4,7 +4,7 @@ import { Button, Title } from "@common";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-import { BREAKPOINTS, FONTS } from "@constants";
+import { BREAKPOINTS, FONTS, PADDING } from "@constants";
 
 
 const GuideSection = () => {
@@ -42,7 +42,7 @@ const GuideSection = () => {
 
 const GuideSectionWrapper = styled.section`
    width: 100%;
-   padding: 100px 0px;
+   padding: ${PADDING.sectionBlock} 0px;
 
    display: flex;
    flex: 1;

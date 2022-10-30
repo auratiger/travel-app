@@ -1,4 +1,4 @@
-import { COLORS, TRANSITIONS, Z_INDICES } from "@constants";
+import { COLORS, PADDING, TRANSITIONS, Z_INDICES } from "@constants";
 import React, { useState, useRef, FC } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -43,7 +43,7 @@ const SelectionMenu: FC<SelectionMenuProps> = ({ title, items }) => {
 }
 
 const Container = styled.div`
-  padding: 10px 20px;
+  padding: ${PADDING.md} ${PADDING.lg};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,7 +66,7 @@ const Ul = styled.ul`
 
   list-style: none;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: ${PADDING.md} ${PADDING.lg};
   border: 1px solid ${COLORS.secondaryText};
   border-radius: 0px 0px 20px 20px;
   background: ${COLORS.background};
@@ -74,7 +74,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   border-bottom: 1px solid ${COLORS.secondaryText};
   transition: ${TRANSITIONS.sm};
-  padding: 10px;
+  padding: ${PADDING.md};
   &:hover {
     background-color: ${COLORS.secondaryText};
   }

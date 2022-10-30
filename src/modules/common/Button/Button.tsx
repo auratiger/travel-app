@@ -1,4 +1,4 @@
-import { COLORS, TRANSITIONS } from "@constants";
+import { COLORS, PADDING, TRANSITIONS } from "@constants";
 import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
@@ -23,7 +23,7 @@ const Button: FC<ButtonProps> = ({ outlined, width, text }) => {
     font-weight: bolder;
     font-size: 1rem;
 
-    padding: 8px 10px;
+    padding: ${PADDING.md} ${PADDING.sm};
     transition: ${TRANSITIONS.md}
 
     ${outlined

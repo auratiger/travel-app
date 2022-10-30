@@ -23,17 +23,21 @@ export const BREAKPOINT_SIZES = {
 };
 
 export const PADDING = {
-   mainInline: "200px"
+   sm: "0.6rem", // 9.6px
+   md: "0.8rem", // 12.8px
+   lg: "1.25rem", // 20px
+   sectionBlock: "7.5rem", // 120px
+   mainInline: "12.5rem" // 200px
 }
 
 export const FONTS = {
    100: '1rem',
-   200: '1.1rem',
-   300: '1.2rem',
+   200: '1.2rem',
+   300: '1.3rem',
    400: '1.4rem',
    500: '1.6rem',
    600: '2.2rem',
-   700: '2.4rem',
+   700: '2.8rem',
    800: '4.2rem',
    900: '5rem',
 }

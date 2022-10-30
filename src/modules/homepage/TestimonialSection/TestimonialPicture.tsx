@@ -8,7 +8,7 @@ import Circle from "@assets/circle.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 import styled from "styled-components";
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, PADDING } from "@constants";
 
 const images = [
    <StaticImage id={'person-image'} src={'../../../images/young-man.jpg'} alt="person" placeholder="none" />,
@@ -87,7 +87,7 @@ const Controls = styled.div`
 
    display: flex;
 
-   padding: 10px 20px;
+   padding: ${PADDING.md} ${PADDING.lg};
    background-color: ${COLORS.background};
    border-radius: 15px 0px 0px 0px;
 
@@ -97,7 +97,7 @@ const Controls = styled.div`
       border: 2px solid ${COLORS.secondaryText};
       border-radius: 100%;
       background: transparent;
-      padding: 10px;
+      padding: ${PADDING.md};
       transition: 0.2s ease;
    }
 

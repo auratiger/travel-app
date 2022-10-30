@@ -4,7 +4,7 @@ import { Button, Title } from "@common";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-import { BREAKPOINTS, FONTS } from "@constants";
+import { BREAKPOINTS, FONTS, PADDING } from "@constants";
 
 const InfoSection = () => {
    return (
@@ -41,7 +41,7 @@ const InfoSection = () => {
 const InfoSectionWrapper = styled.section`
 
    width: 100%;
-   padding: 100px 0px;
+   padding: ${PADDING.sectionBlock} 0px;
    display: flex;
    align-items: center;
    justify-content: space-between;

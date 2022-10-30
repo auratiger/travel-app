@@ -107,11 +107,11 @@ const LandingPage = styled.main`
    background-color: ${COLORS.background};
 
    @media screen and ${BREAKPOINTS.lg} {
-      padding: 0px 20px;
+      padding: 0px ${PADDING.lg};
    }
 
    @media screen and ${BREAKPOINTS.sm} {
-      padding: 0px 20px;
+      padding: 0px ${PADDING.lg};
    }
 `;
 

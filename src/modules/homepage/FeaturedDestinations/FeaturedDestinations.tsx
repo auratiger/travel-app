@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { BsChevronRight } from "react-icons/bs";
 
 import { Destination, Title } from "@common";
-import { BREAKPOINTS, COLORS, FONTS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 
 import styled from "styled-components";
 import { getImage } from "gatsby-plugin-image";
@@ -36,7 +36,7 @@ const FeaturedDestinations: FC<FeaturedDestinationsProps> = ({ destinations }) =
 const FeaturedDestinationsWrapper = styled.section`
 
    width: 100%;
-   padding: 120px 0px;
+   padding: ${PADDING.sectionBlock} 0px;
    scroll-snap-align: start;
 
    header {

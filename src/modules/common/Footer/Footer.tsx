@@ -9,7 +9,7 @@ import {
 } from "react-icons/bs";
 
 import Logo from "@assets/logo.svg";
-import { BREAKPOINTS, COLORS, SHADOWS } from "@constants";
+import { BREAKPOINTS, COLORS, PADDING, SHADOWS } from "@constants";
 import { FooterSubTitle, FooterTitle } from "@common";
 
 import styled from "styled-components";
@@ -90,14 +90,14 @@ const FooterWrapper = styled.footer`
 
    .container section {
       width: fit-content;
-      padding: 20px;
+      padding: ${PADDING.lg};
    }
 
    .icons-container {
       width: 100%;
       display: flex;
       justify-content: center;
-      padding: 20px 0px;
+      padding: ${PADDING.lg} 0px;
    }
 
    .icons{

@@ -4,7 +4,7 @@ import { Button, DatePicker, HeroTitle, SelectionMenu, SubTitle } from "@common"
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-import { BREAKPOINTS } from "@constants";
+import { BREAKPOINTS, PADDING } from "@constants";
 
 import Plus from "@assets/plus.svg";
 import Circle from "@assets/circle.svg";
@@ -82,7 +82,7 @@ const HeroWrapper = styled.section`
    gap: 4rem;
 
    width: 100%;
-   padding: 120px 0px;
+   padding: ${PADDING.sectionBlock} 0px;
    scroll-snap-align: start;
 
    section {

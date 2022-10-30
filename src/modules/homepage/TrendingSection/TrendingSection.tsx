@@ -2,8 +2,8 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { BREAKPOINTS, COLORS, FONTS } from "@constants";
-import { Story } from "@common";
+import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
+import { Story, Title } from "@common";
 import { getImage } from "gatsby-plugin-image";
 
 import styled from "styled-components";
@@ -17,7 +17,7 @@ const TrendingStoriesSection: FC<TrendingStoriesSectionProps> = ({ stories }) =>
    return (
       <TrendingStoriesSectionWrapper>
          <header>
-            <H1>Trending stories</H1>
+            <Title>Trending stories</Title>
             <Right>
                View All <BsChevronRight />
             </Right>
@@ -35,7 +35,7 @@ const TrendingStoriesSection: FC<TrendingStoriesSectionProps> = ({ stories }) =>
 
 const TrendingStoriesSectionWrapper = styled.section`
    width: 100%;
-   padding: 120px 0px;
+   padding: ${PADDING.sectionBlock} 0px;
    scroll-snap-align: start;
 
    header {
@@ -62,17 +62,12 @@ const TrendingStoriesSectionWrapper = styled.section`
    }
 `
 
-const H1 = styled.h1`
-   font-size: ${FONTS[600]};
-   font-family: "Playfair Display", serif;
-`;
-
 const Right = styled.div`
    display: flex;
    align-items: center;
 
    color: ${COLORS.primary};
-   font-size: 1.1rem;
+   font-size: ${FONTS[200]};
    font-weight: 1000;
 
    &:hover {

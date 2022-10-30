@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { BREAKPOINTS, COLORS, TRANSITIONS, Z_INDICES } from "@constants";
+import { BREAKPOINTS, COLORS, PADDING, TRANSITIONS, Z_INDICES } from "@constants";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 export interface DestinationProps {
@@ -61,7 +61,7 @@ const Overlay = styled.div`
    align-items: flex-start;
    justify-content: flex-end;
 
-   padding: 10px;
+   padding: ${PADDING.md};
    border-radius: 0px 10px 0px 0px;
 
    position: relative;

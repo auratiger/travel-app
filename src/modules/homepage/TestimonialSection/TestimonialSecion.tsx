@@ -2,14 +2,15 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 
 import styled from "styled-components";
-import { BREAKPOINTS, COLORS, FONTS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 import TestimonialPicture from "./TestimonialPicture";
+import { Title } from "@common";
 
 const TestimonialSection = () => {
    return (
       <TestimonialSectionWrapper>
          <div className="left">
-            <h1>Testimonials</h1>
+            <Title>Testimonials</Title>
 
             <Stars>
                <AiFillStar />
@@ -36,7 +37,7 @@ const TestimonialSection = () => {
 
 const TestimonialSectionWrapper = styled.section`
    width: 100%;
-   padding: 120px 0px;
+   padding: ${PADDING.sectionBlock} 0px;
    scroll-snap-align: start;
    display: flex;
    align-items: center;
@@ -77,7 +78,7 @@ const TestimonialSectionWrapper = styled.section`
 
    @media screen and ${BREAKPOINTS.sm} {
       flex-direction: column;
-      padding: 20px 0px;
+      padding: ${PADDING.lg} 0px;
 
       .left {
          width: 100%;

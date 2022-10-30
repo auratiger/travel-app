@@ -70,7 +70,7 @@ const NavbarWrapper = styled.nav`
 
    left: 0px;
 
-   padding: 10px ${PADDING.mainInline};
+   padding: ${PADDING.sm} ${PADDING.mainInline};
 
    background: ${COLORS.background};
    box-shadow: ${SHADOWS.md};
@@ -114,7 +114,7 @@ const NavbarWrapper = styled.nav`
    }
 
    @media screen and ${BREAKPOINTS.sm} {
-    padding: 10px 20px;
+    padding: ${PADDING.md} ${PADDING.lg};
 
      h3 {
        margin-right: 0px;
