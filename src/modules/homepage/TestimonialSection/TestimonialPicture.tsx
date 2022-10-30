@@ -11,9 +11,9 @@ import styled from "styled-components";
 import { BREAKPOINTS, COLORS } from "@constants";
 
 const images = [
-   <StaticImage id={'person-image'} src={'../../../images/young-man.jpg'} alt="person" />,
-   <StaticImage id={'person-image'} src={'../../../images/person.png'} alt="person" />,
-   <StaticImage id={'person-image'} src={'../../../images/solo-traveler.jpg'} alt="person" />,
+   <StaticImage id={'person-image'} src={'../../../images/young-man.jpg'} alt="person" placeholder="none" />,
+   <StaticImage id={'person-image'} src={'../../../images/person.png'} alt="person" placeholder="none" />,
+   <StaticImage id={'person-image'} src={'../../../images/solo-traveler.jpg'} alt="person" placeholder="none" />,
 ]
 
 const TestimonialPicture = () => {

@@ -22,10 +22,18 @@ const config: GatsbyConfig = {
    plugins: [
       "gatsby-plugin-styled-components",
       "gatsby-plugin-image",
-      "gatsby-plugin-sharp",
       "gatsby-transformer-sharp",
       "gatsby-transformer-javascript-frontmatter",
       "gatsby-plugin-sitemap",
+      {
+         resolve: `gatsby-plugin-sharp`,
+         options: {
+            // Defaults used for gatsbyImageData and StaticImage
+            defaults: {
+               quality: 100
+            },
+         },
+      },
       {
          resolve: 'gatsby-source-filesystem',
          options: {

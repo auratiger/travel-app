@@ -61,7 +61,7 @@ const Hero = () => {
             }}
          >
             <section className="right">
-               <StaticImage id={'travel-image'} src={'../../../images/thousand-01_1.png'} alt="picture" width={670} />
+               <StaticImage id={'travel-image'} src={'../../../images/Thousand-01_1.png'} alt="picture" width={670} placeholder="none" />
             </section>
          </motion.div>
       </HeroWrapper>

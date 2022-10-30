@@ -20,7 +20,7 @@ const InfoSection = () => {
             }}
          >
             <div className="left">
-               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={670} />
+               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={670} placeholder="none" />
             </div>
          </motion.div>
          <div className="right">

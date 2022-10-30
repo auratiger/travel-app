@@ -33,7 +33,7 @@ const GuideSection = () => {
             }}
          >
             <div className="left">
-               <StaticImage id={'guide-image'} src={'../../../images/Thousand-03.png'} alt="picture" width={670 * 1.4} />
+               <StaticImage id={'guide-image'} src={'../../../images/Thousand-03.png'} alt="picture" width={670 * 1.4} placeholder="none" />
             </div>
          </motion.div>
       </GuideSectionWrapper>
