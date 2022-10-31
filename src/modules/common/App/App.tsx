@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import './reset.css';
 import './fonts.css';
+import { COLORS } from '@constants';
 
 const GlobalStyles = createGlobalStyle`
    body {
@@ -12,7 +13,20 @@ const GlobalStyles = createGlobalStyle`
    }
 
    ::-webkit-scrollbar {
-     display: none;
+      width: 10px;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background-color: ${COLORS.primary};
+      border-radius: 25px;
+   }
+
+   ::-webkit-scrollbar-thumb:hover {
+      background-color: ${COLORS.accent};
+   }
+
+   ::selection {
+     background: ${COLORS.primary};
    }
 `;
 
