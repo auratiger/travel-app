@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 import styled from "styled-components";
 import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 import TestimonialPicture from "./TestimonialPicture";
-import { Title } from "@common";
+import { GenericSection, Title } from "@common";
 
 import { CircleIcon } from "@assets";
 
@@ -43,15 +43,7 @@ const TestimonialSection = () => {
 }
 
 
-const TestimonialSectionWrapper = styled.section`
-   position: relative;
-
-   width: 100%;
-   padding: ${PADDING.sectionBlock} 0px;
-   scroll-snap-align: start;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+const TestimonialSectionWrapper = styled(GenericSection)`
    gap: 10px;
 
    .left-container {

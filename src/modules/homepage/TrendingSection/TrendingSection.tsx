@@ -2,8 +2,8 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
-import { Story, Title } from "@common";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
+import { GenericSection, Story, Title } from "@common";
 import { getImage } from "gatsby-plugin-image";
 
 import { PlusIcon, CircleIcon } from "@assets";
@@ -39,12 +39,8 @@ const TrendingStoriesSection: FC<TrendingStoriesSectionProps> = ({ stories }) =>
    );
 }
 
-const TrendingStoriesSectionWrapper = styled.section`
-   position: relative;
-
-   width: 100%;
-   padding: ${PADDING.sectionBlock} 0px;
-   scroll-snap-align: start;
+const TrendingStoriesSectionWrapper = styled(GenericSection)`
+   display: block;
 
    header {
       display: flex;

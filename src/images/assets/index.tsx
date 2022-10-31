@@ -6,9 +6,11 @@ import styled from "styled-components";
 export const PlusIcon = styled(Plus)`
    position: absolute;
    zoom: 0.8;
+   z-index: -1;
 `
 
 export const CircleIcon = styled(Circle)`
    position: absolute;
    zoom: 0.8;
+   z-index: -1;
 `

@@ -1,10 +1,10 @@
 import React from "react";
-import { Button, DatePicker, HeroTitle, SelectionMenu, SubTitle } from "@common";
+import { Button, DatePicker, GenericSection, HeroTitle, SelectionMenu, SubTitle } from "@common";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-import { BREAKPOINTS, PADDING } from "@constants";
+import { BREAKPOINTS } from "@constants";
 
 import { PlusIcon, CircleIcon } from "@assets";
 
@@ -71,22 +71,11 @@ const Hero = () => {
    );
 }
 
-const HeroWrapper = styled.section`
-   position: relative;
-
-   display: flex;
-   flex: 1;
-   align-items: center;
-   justify-content: space-between;
+const HeroWrapper = styled(GenericSection)`
    gap: 4rem;
-
-   width: 100%;
-   padding: ${PADDING.sectionBlock} 0px;
-   scroll-snap-align: start;
 
    section {
       flex-grow: 1;
-      z-index: 10;
    }
 
    .right-container {

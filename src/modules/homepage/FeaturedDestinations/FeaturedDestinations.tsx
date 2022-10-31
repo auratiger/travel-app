@@ -2,8 +2,8 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { Destination, Title } from "@common";
-import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
+import { Destination, GenericSection, Title } from "@common";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
 
 import styled from "styled-components";
 import { getImage } from "gatsby-plugin-image";
@@ -39,12 +39,8 @@ const FeaturedDestinations: FC<FeaturedDestinationsProps> = ({ destinations }) =
    );
 }
 
-const FeaturedDestinationsWrapper = styled.section`
-   position: relative;
-
-   width: 100%;
-   padding: ${PADDING.sectionBlock} 0px;
-   scroll-snap-align: start;
+const FeaturedDestinationsWrapper = styled(GenericSection)`
+   display: block;
 
    header {
       display: flex;

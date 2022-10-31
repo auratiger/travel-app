@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Button, Title } from "@common";
+import { Button, GenericSection, Title } from "@common";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-import { BREAKPOINTS, FONTS, PADDING } from "@constants";
+import { BREAKPOINTS, FONTS } from "@constants";
 
 import { PlusIcon, CircleIcon } from "@assets";
 
@@ -42,16 +42,8 @@ const InfoSection = () => {
    );
 }
 
-const InfoSectionWrapper = styled.section`
-   position: relative;
-
-   width: 100%;
-   padding: ${PADDING.sectionBlock} 0px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+const InfoSectionWrapper = styled(GenericSection)`
    gap: 4rem;
-   scroll-snap-align: start;
 
    .right-container {
       width: 60ch;
