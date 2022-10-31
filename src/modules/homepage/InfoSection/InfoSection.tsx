@@ -1,10 +1,12 @@
 import React from "react";
 
-import { Button, Title } from "@common";
+import { Button, GenericSection, Title } from "@common";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-import { BREAKPOINTS } from "@constants";
+import { BREAKPOINTS, FONTS } from "@constants";
+
+import { PlusIcon, CircleIcon } from "@assets";
 
 const InfoSection = () => {
    return (
@@ -20,36 +22,43 @@ const InfoSection = () => {
             }}
          >
             <div className="left">
-               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={670} />
+               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={824} placeholder="none" />
             </div>
          </motion.div>
-         <div className="right">
+         <div className="right-container">
             <Title>A new way to explore the world </Title>
-            <div>
-               <P>
-                  For decades travellers have reached for Lonely Planet books when
-                  looking to plan and execute their perfect trip, but now, they can
-                  also let Lonely Planet Experiences lead the way
-               </P>
-               <Button outlined={false} text="Learn More" width="160px" />
-            </div>
+            <P>
+               For decades travellers have reached for Lonely Planet books when
+               looking to plan and execute their perfect trip, but now, they can
+               also let Lonely Planet Experiences lead the way
+            </P>
+            <Button outlined={false} text="Learn More" width="160px" />
          </div>
+
+         <CircleIcon id="circle1" />
+         <PlusIcon id="plus1" />
+         <PlusIcon id="plus2" />
       </InfoSectionWrapper>
    );
 }
 
-const InfoSectionWrapper = styled.section`
+const InfoSectionWrapper = styled(GenericSection)`
+   gap: 4rem;
 
-   width: 100%;
-   padding: 100px 0px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 100px;
-   scroll-snap-align: start;
+   .right-container {
+      width: 60ch;
+      display: grid;
+      gap: 1rem;
+   }
 
-   .right {
-      width: 25%;
+   #circle1 {
+      bottom: 20%;
+      right: 5%;
+   }
+
+   #plus1 {
+      top: 15%;
+      right: 30%;
    }
 
    @media screen and ${BREAKPOINTS.lg} {
@@ -57,9 +66,9 @@ const InfoSectionWrapper = styled.section`
          width: 400px;
       }
 
-      gap: 50px;
+      gap: 3rem;
 
-      .right {
+      .right-container {
          width: 50%;
       }
    }
@@ -67,7 +76,7 @@ const InfoSectionWrapper = styled.section`
    @media screen and ${BREAKPOINTS.sm} {
       flex-direction: column-reverse;
 
-      .right {
+      .right-container {
          width: 100%;
       }
 
@@ -82,7 +91,7 @@ const InfoSectionWrapper = styled.section`
 `
 
 const P = styled.p`
-  font-size: 1.1rem;
+  font-size: ${FONTS[200]};
   margin-bottom: 20px;
 `;
 

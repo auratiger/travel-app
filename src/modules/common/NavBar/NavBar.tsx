@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Logo from "@src/assets/logo.svg";
+import Logo from "@assets/logo.svg";
 import { Button } from "@common";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import { BREAKPOINTS, COLORS, SHADOWS, TRANSITIONS, Z_INDICES } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS, PADDING, SHADOWS, TRANSITIONS, Z_INDICES } from "@constants";
 
 const Navbar = () => {
    const [opened, setOpened] = useState<boolean>(false);
@@ -57,24 +57,24 @@ const Navbar = () => {
 
 const NavbarWrapper = styled.nav`
 
-  width: 100%;
+   width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: stretch;
 
-  position: fixed;
-  z-index: ${Z_INDICES.header};
-  isolation: isolate;
+   position: fixed;
+   z-index: ${Z_INDICES.header};
+   isolation: isolate;
 
-  left: 0px;
+   left: 0px;
 
-  padding: 10px 190px;
+   padding: ${PADDING.sm} ${PADDING.mainInline};
 
-  background: ${COLORS.background};
+   background: ${COLORS.background};
    box-shadow: ${SHADOWS.md};
-  transition: ${TRANSITIONS.sm};
+   transition: ${TRANSITIONS.sm};
 
    div {
      display: flex;
@@ -91,7 +91,7 @@ const NavbarWrapper = styled.nav`
    }
 
    h3 {
-     font-size: 1rem;
+     font-size: ${FONTS[200]};
      color: ${COLORS.secondaryText};
      transition: ${TRANSITIONS.md};
      margin-right: 40px;
@@ -110,11 +110,11 @@ const NavbarWrapper = styled.nav`
 
    .hamburger {
      display: none;
-     font-size: 1.2rem;
+     font-size: ${FONTS[300]};
    }
 
    @media screen and ${BREAKPOINTS.sm} {
-    padding: 10px 20px;
+    padding: ${PADDING.md} ${PADDING.lg};
 
      h3 {
        margin-right: 0px;

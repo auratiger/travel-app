@@ -2,89 +2,94 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 
 import styled from "styled-components";
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 import TestimonialPicture from "./TestimonialPicture";
+import { GenericSection, Title } from "@common";
+
+import { CircleIcon } from "@assets";
 
 const TestimonialSection = () => {
    return (
       <TestimonialSectionWrapper>
-         <div className="left">
-            <h1>Testimonials</h1>
+         <div className="left-container">
+            <Title>Testimonials</Title>
 
-            <Stars>
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-               <AiFillStar />
-            </Stars>
+            <div>
+               <Stars>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+               </Stars>
 
-            <p className="text">
-               “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus
-               ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis
-               nec”
-            </p>
+               <p className="text">
+                  “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus
+                  ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis
+                  nec”
+               </p>
+            </div>
 
-            <h2 className="name">Edward Newgate</h2>
-            <h3 className="role">Founder Circle</h3>
+            <div>
+               <h2 className="name">Edward Newgate</h2>
+               <h3 className="role">Founder Circle</h3>
+            </div>
          </div>
          <TestimonialPicture />
+
+         <CircleIcon id="circle1" />
       </TestimonialSectionWrapper>
    );
 }
 
 
-const TestimonialSectionWrapper = styled.section`
-   width: 100%;
-   padding: 120px 0px;
-   scroll-snap-align: start;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+const TestimonialSectionWrapper = styled(GenericSection)`
    gap: 10px;
 
-   .left {
+   .left-container {
       width: 60ch;
+      display: grid;
+      gap: 1rem;
    }
 
-   .left h1 {
-      font-size: 2.2rem;
+   .left-container h1 {
+      font-size: ${FONTS[600]};
       font-family: "Playfair Display", serif;
-      padding-bottom: 35px;
    }
 
    .text {
-      font-size: 1.4rem;
-      margin-bottom: 50px;
+      font-size: ${FONTS[400]};
+      margin-bottom: 20px;
    }
 
    .name {
-      font-size: 1.4rem;
+      font-size: ${FONTS[400]};
       font-weight: bold;
    }
 
    .role {
-      font-size: 1rem;
+      font-size: ${FONTS[100]};
       color: ${COLORS.secondaryText};
    }
 
+   #circle1 {
+      left: -5%;
+      top: 45%;
+      zoom: 0.5;
+   }
 
    @media screen and ${BREAKPOINTS.lg} {
-      .left {
+      .left-container {
          width: 50%;
       }
    }
 
    @media screen and ${BREAKPOINTS.sm} {
       flex-direction: column;
-      padding: 20px 0px;
+      padding: ${PADDING.lg} 0px;
 
-      .left {
+      .left-container {
          width: 100%;
-      }
-
-      .left h1 {
-         padding-bottom: 60px;
       }
 
    }
@@ -93,8 +98,8 @@ const TestimonialSectionWrapper = styled.section`
 const Stars = styled.div`
    display: flex;
    color: ${COLORS.accent};
-   font-size: 1.6rem;
-   gap: 10px;
+   font-size: ${FONTS[500]};
+   gap: 0.8rem;
 `
 
 export default TestimonialSection;

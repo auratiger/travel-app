@@ -1,4 +1,4 @@
-import { COLORS } from "@constants";
+import { COLORS, PADDING } from "@constants";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,7 +15,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  padding: 10px 20px;
+  padding: ${PADDING.md} ${PADDING.lg};
   border: 1px solid ${COLORS.secondaryText};
   border-radius: 6px;
   cursor: pointer;

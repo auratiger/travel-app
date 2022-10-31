@@ -3,7 +3,7 @@ export const COLORS = {
    accent: 'hsl(43deg 100% 52%)',
    background: 'hsl(0deg 0% 100%)',
    primaryText: 'hsl(232deg 26% 17%)',
-   secondaryText: 'hsl(223deg 17% 76%)',
+   secondaryText: 'hsl(223deg 20% 30%)',
    black: 'hsl(0deg 0% 0%)',
    gray: 'hsl(232deg 26% 17%)',
    grayLight: 'hsl(236deg 5% 35%)',
@@ -21,6 +21,27 @@ export const BREAKPOINT_SIZES = {
    lg: 1024,
    xl: 1440,
 };
+
+export const PADDING = {
+   sm: "0.6rem", // 9.6px
+   md: "0.8rem", // 12.8px
+   lg: "1.25rem", // 20px
+   sectionBlock: "7.5rem", // 120px
+   mainInline: "15rem" // 250px
+   // TODO: create different inline padding values for different screen sizes
+}
+
+export const FONTS = {
+   100: '1rem',
+   200: '1.2rem',
+   300: '1.3rem',
+   400: '1.4rem',
+   500: '1.6rem',
+   600: '2.2rem',
+   700: '2.8rem',
+   800: '4.2rem',
+   900: '5rem',
+}
 
 export const BREAKPOINTS = {
    xs: `(max-width: ${BREAKPOINT_SIZES.xs}px)`,

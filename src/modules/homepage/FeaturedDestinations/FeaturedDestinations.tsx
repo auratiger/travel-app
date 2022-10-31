@@ -2,11 +2,13 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { Destination, Title } from "@common";
-import { BREAKPOINTS, COLORS } from "@constants";
+import { Destination, GenericSection, Title } from "@common";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
 
 import styled from "styled-components";
 import { getImage } from "gatsby-plugin-image";
+
+import { PlusIcon, CircleIcon } from "@assets";
 
 export interface FeaturedDestinationsProps {
    destinations: Array<any>;
@@ -29,15 +31,16 @@ const FeaturedDestinations: FC<FeaturedDestinationsProps> = ({ destinations }) =
                })
             }
          </div>
+
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle1" />
+         <CircleIcon id="circle2" />
       </FeaturedDestinationsWrapper>
    );
 }
 
-const FeaturedDestinationsWrapper = styled.section`
-
-   width: 100%;
-   padding: 120px 0px;
-   scroll-snap-align: start;
+const FeaturedDestinationsWrapper = styled(GenericSection)`
+   display: block;
 
    header {
       display: flex;
@@ -51,6 +54,22 @@ const FeaturedDestinationsWrapper = styled.section`
       display: flex;
       justify-content: space-between;
       gap: 40px;
+   }
+
+   #plus {
+      left: -5%;
+      bottom: 35%;
+      rotate: -20deg;
+   }
+
+   #circle1 {
+      top: 5%;
+      right: 25%;
+   }
+
+   #circle2 {
+      bottom: 5%;
+      left: 40%;
    }
 
    @media screen and ${BREAKPOINTS.sm} {
@@ -67,7 +86,7 @@ const Link = styled.a`
   color: ${COLORS.primary};
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: ${FONTS[200]};
   font-weight: 1000;
 
   &:hover {

@@ -2,9 +2,11 @@ import React, { FC } from "react";
 
 import { BsChevronRight } from "react-icons/bs";
 
-import { BREAKPOINTS, COLORS } from "@constants";
-import { Story } from "@common";
+import { BREAKPOINTS, COLORS, FONTS } from "@constants";
+import { GenericSection, Story, Title } from "@common";
 import { getImage } from "gatsby-plugin-image";
+
+import { PlusIcon, CircleIcon } from "@assets";
 
 import styled from "styled-components";
 
@@ -17,7 +19,7 @@ const TrendingStoriesSection: FC<TrendingStoriesSectionProps> = ({ stories }) =>
    return (
       <TrendingStoriesSectionWrapper>
          <header>
-            <H1>Trending stories</H1>
+            <Title>Trending stories</Title>
             <Right>
                View All <BsChevronRight />
             </Right>
@@ -29,14 +31,16 @@ const TrendingStoriesSection: FC<TrendingStoriesSectionProps> = ({ stories }) =>
                })
             }
          </div>
+
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle1" />
+         <CircleIcon id="circle2" />
       </TrendingStoriesSectionWrapper>
    );
 }
 
-const TrendingStoriesSectionWrapper = styled.section`
-   width: 100%;
-   padding: 120px 0px;
-   scroll-snap-align: start;
+const TrendingStoriesSectionWrapper = styled(GenericSection)`
+   display: block;
 
    header {
       display: flex;
@@ -52,6 +56,21 @@ const TrendingStoriesSectionWrapper = styled.section`
       gap: 40px;
    }
 
+   #plus {
+      top: 0;
+      left: 45%;
+   }
+
+   #circle1 {
+      left: -5%;
+      bottom: 40%;
+   }
+
+   #circle2 {
+      right: 25%;
+      bottom: 5%;
+   }
+
    @media screen and ${BREAKPOINTS.sm} {
       .cards {
          flex-direction: column;
@@ -62,17 +81,12 @@ const TrendingStoriesSectionWrapper = styled.section`
    }
 `
 
-const H1 = styled.h1`
-   font-size: 2.2rem;
-   font-family: "Playfair Display", serif;
-`;
-
 const Right = styled.div`
    display: flex;
    align-items: center;
 
    color: ${COLORS.primary};
-   font-size: 1.1rem;
+   font-size: ${FONTS[200]};
    font-weight: 1000;
 
    &:hover {

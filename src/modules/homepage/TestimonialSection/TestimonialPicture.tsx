@@ -2,18 +2,17 @@ import React, { useState } from "react";
 
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
-import Plus from "@src/assets/plus.svg";
-import Circle from "@src/assets/circle.svg";
+import { PlusIcon, CircleIcon } from "@assets";
 
 import { StaticImage } from "gatsby-plugin-image";
 
 import styled from "styled-components";
-import { BREAKPOINTS, COLORS } from "@constants";
+import { BREAKPOINTS, COLORS, PADDING } from "@constants";
 
 const images = [
-   <StaticImage id={'person-image'} src={'../../../images/young-man.jpg'} alt="person" />,
-   <StaticImage id={'person-image'} src={'../../../images/person.png'} alt="person" />,
-   <StaticImage id={'person-image'} src={'../../../images/solo-traveler.jpg'} alt="person" />,
+   <StaticImage id={'person-image'} src={'../../../images/young-man.jpg'} alt="person" placeholder="none" />,
+   <StaticImage id={'person-image'} src={'../../../images/person.png'} alt="person" placeholder="none" />,
+   <StaticImage id={'person-image'} src={'../../../images/solo-traveler.jpg'} alt="person" placeholder="none" />,
 ]
 
 const TestimonialPicture = () => {
@@ -40,8 +39,8 @@ const TestimonialPicture = () => {
             </button>
          </Controls>
 
-         <Plus id="plus" />
-         <Circle id="circle" />
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle" />
       </TestimonialPictureWrapper>
    );
 }
@@ -56,18 +55,18 @@ const TestimonialPictureWrapper = styled.div`
    }
 
    #plus {
-      position: absolute;
       top: -2%;
       right: -4%;
-      rotate: 45deg;
+      rotate: 25deg;
+      zoom: 1.2;
       z-index: 1;
    }
 
    #circle {
-      position: absolute;
       left: -4%;
       bottom: -2%;
-      z-index: 1;
+      z-index: -1;
+      zoom: 1;
    }
 
    @media screen and ${BREAKPOINTS.sm} {
@@ -87,7 +86,7 @@ const Controls = styled.div`
 
    display: flex;
 
-   padding: 10px 20px;
+   padding: ${PADDING.md} ${PADDING.lg};
    background-color: ${COLORS.background};
    border-radius: 15px 0px 0px 0px;
 
@@ -97,7 +96,7 @@ const Controls = styled.div`
       border: 2px solid ${COLORS.secondaryText};
       border-radius: 100%;
       background: transparent;
-      padding: 10px;
+      padding: ${PADDING.md};
       transition: 0.2s ease;
    }
 
