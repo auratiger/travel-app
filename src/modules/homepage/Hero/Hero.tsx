@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { BREAKPOINTS, PADDING } from "@constants";
 
-import Plus from "@assets/plus.svg";
-import Circle from "@assets/circle.svg";
+import { PlusIcon, CircleIcon } from "@assets";
 
 const Hero = () => {
    return (
@@ -65,9 +64,9 @@ const Hero = () => {
             </motion.div>
          </section>
 
-         <Circle id="circle1" className={"float-image"} />
-         <Circle id="circle2" className={"float-image"} />
-         <Plus id="plus1" className={"float-image"} />
+         <CircleIcon id="circle1" />
+         <CircleIcon id="circle2" />
+         <PlusIcon id="plus1" />
       </HeroWrapper>
    );
 }
@@ -105,14 +104,9 @@ const HeroWrapper = styled.section`
       padding-bottom: 50px;
    }
 
-   .float-image {
-      position: absolute;
-   }
-
    #circle1 {
       top: 40%;
       left: -5%;
-      zoom: 0.8;
    }
 
    #circle2 {
@@ -124,7 +118,6 @@ const HeroWrapper = styled.section`
    #plus1 {
       top: 15%;
       left: 40%;
-      zoom: 0.8;
       rotate: -25deg;
    }
 

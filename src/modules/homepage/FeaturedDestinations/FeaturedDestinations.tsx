@@ -8,6 +8,8 @@ import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 import styled from "styled-components";
 import { getImage } from "gatsby-plugin-image";
 
+import { PlusIcon, CircleIcon } from "@assets";
+
 export interface FeaturedDestinationsProps {
    destinations: Array<any>;
 }
@@ -29,11 +31,16 @@ const FeaturedDestinations: FC<FeaturedDestinationsProps> = ({ destinations }) =
                })
             }
          </div>
+
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle1" />
+         <CircleIcon id="circle2" />
       </FeaturedDestinationsWrapper>
    );
 }
 
 const FeaturedDestinationsWrapper = styled.section`
+   position: relative;
 
    width: 100%;
    padding: ${PADDING.sectionBlock} 0px;
@@ -51,6 +58,22 @@ const FeaturedDestinationsWrapper = styled.section`
       display: flex;
       justify-content: space-between;
       gap: 40px;
+   }
+
+   #plus {
+      left: -5%;
+      bottom: 35%;
+      rotate: -20deg;
+   }
+
+   #circle1 {
+      top: 5%;
+      right: 25%;
+   }
+
+   #circle2 {
+      bottom: 5%;
+      left: 40%;
    }
 
    @media screen and ${BREAKPOINTS.sm} {

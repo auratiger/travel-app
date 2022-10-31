@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { BREAKPOINTS, COLORS, FONTS, PADDING, TRANSITIONS } from "@constants";
-import { ImageTitle } from "../Title/Title";
+import { ImageTitle } from "@common";
 
 export interface StoryProps {
    image: IGatsbyImageData;

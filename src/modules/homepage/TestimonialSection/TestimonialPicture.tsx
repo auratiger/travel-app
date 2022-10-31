@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
-import Plus from "@assets/plus.svg";
-import Circle from "@assets/circle.svg";
+import { PlusIcon, CircleIcon } from "@assets";
 
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -40,8 +39,8 @@ const TestimonialPicture = () => {
             </button>
          </Controls>
 
-         <Plus id="plus" />
-         <Circle id="circle" />
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle" />
       </TestimonialPictureWrapper>
    );
 }
@@ -56,18 +55,18 @@ const TestimonialPictureWrapper = styled.div`
    }
 
    #plus {
-      position: absolute;
       top: -2%;
       right: -4%;
-      rotate: 45deg;
+      rotate: 25deg;
+      zoom: 1.2;
       z-index: 1;
    }
 
    #circle {
-      position: absolute;
       left: -4%;
       bottom: -2%;
-      z-index: 1;
+      z-index: -1;
+      zoom: 1;
    }
 
    @media screen and ${BREAKPOINTS.sm} {

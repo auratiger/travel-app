@@ -27,7 +27,8 @@ export const PADDING = {
    md: "0.8rem", // 12.8px
    lg: "1.25rem", // 20px
    sectionBlock: "7.5rem", // 120px
-   mainInline: "12.5rem" // 200px
+   mainInline: "15rem" // 250px
+   // TODO: create different inline padding values for different screen sizes
 }
 
 export const FONTS = {

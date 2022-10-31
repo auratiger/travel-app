@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { BREAKPOINTS, FONTS, PADDING } from "@constants";
 
+import { PlusIcon, CircleIcon } from "@assets";
 
 const GuideSection = () => {
    return (
@@ -34,11 +35,16 @@ const GuideSection = () => {
                <StaticImage id={'guide-image'} src={'../../../images/Thousand-03.png'} alt="picture" width={670 * 1.4} placeholder="none" />
             </div>
          </motion.div>
+
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle" />
       </GuideSectionWrapper>
    );
 }
 
 const GuideSectionWrapper = styled.section`
+   position: relative;
+
    width: 100%;
    padding: ${PADDING.sectionBlock} 0px;
 
@@ -58,6 +64,18 @@ const GuideSectionWrapper = styled.section`
       width: 60ch;
       display: grid;
       gap: 1rem;
+   }
+
+   #plus {
+      bottom: 25%;
+      left: 35%;
+      zoom: 0.6;
+      rotate: 20deg;
+   }
+
+   #circle {
+      top: 20%;
+      left: 5%;
    }
 
    @media screen and ${BREAKPOINTS.lg} {

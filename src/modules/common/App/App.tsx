@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
      scrollbar-width: none;  /* Firefox */
    }
 
+   p {
+      line-height: 1.8;
+   }
+
    ::-webkit-scrollbar {
       width: 10px;
    }

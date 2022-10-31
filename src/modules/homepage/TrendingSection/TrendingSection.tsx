@@ -6,6 +6,8 @@ import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 import { Story, Title } from "@common";
 import { getImage } from "gatsby-plugin-image";
 
+import { PlusIcon, CircleIcon } from "@assets";
+
 import styled from "styled-components";
 
 export interface TrendingStoriesSectionProps {
@@ -29,11 +31,17 @@ const TrendingStoriesSection: FC<TrendingStoriesSectionProps> = ({ stories }) =>
                })
             }
          </div>
+
+         <PlusIcon id="plus" />
+         <CircleIcon id="circle1" />
+         <CircleIcon id="circle2" />
       </TrendingStoriesSectionWrapper>
    );
 }
 
 const TrendingStoriesSectionWrapper = styled.section`
+   position: relative;
+
    width: 100%;
    padding: ${PADDING.sectionBlock} 0px;
    scroll-snap-align: start;
@@ -50,6 +58,21 @@ const TrendingStoriesSectionWrapper = styled.section`
       display: flex;
       justify-content: space-between;
       gap: 40px;
+   }
+
+   #plus {
+      top: 0;
+      left: 45%;
+   }
+
+   #circle1 {
+      left: -5%;
+      bottom: 40%;
+   }
+
+   #circle2 {
+      right: 25%;
+      bottom: 5%;
    }
 
    @media screen and ${BREAKPOINTS.sm} {

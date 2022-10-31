@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { BREAKPOINTS, FONTS, PADDING } from "@constants";
 
+import { PlusIcon, CircleIcon } from "@assets";
+
 const InfoSection = () => {
    return (
       <InfoSectionWrapper>
@@ -20,7 +22,7 @@ const InfoSection = () => {
             }}
          >
             <div className="left">
-               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={670} placeholder="none" />
+               <StaticImage id={'info-image'} src={'../../../images/Thousand-02_1.png'} alt="picture" width={824} placeholder="none" />
             </div>
          </motion.div>
          <div className="right-container">
@@ -32,11 +34,16 @@ const InfoSection = () => {
             </P>
             <Button outlined={false} text="Learn More" width="160px" />
          </div>
+
+         <CircleIcon id="circle1" />
+         <PlusIcon id="plus1" />
+         <PlusIcon id="plus2" />
       </InfoSectionWrapper>
    );
 }
 
 const InfoSectionWrapper = styled.section`
+   position: relative;
 
    width: 100%;
    padding: ${PADDING.sectionBlock} 0px;
@@ -50,6 +57,16 @@ const InfoSectionWrapper = styled.section`
       width: 60ch;
       display: grid;
       gap: 1rem;
+   }
+
+   #circle1 {
+      bottom: 20%;
+      right: 5%;
+   }
+
+   #plus1 {
+      top: 15%;
+      right: 30%;
    }
 
    @media screen and ${BREAKPOINTS.lg} {

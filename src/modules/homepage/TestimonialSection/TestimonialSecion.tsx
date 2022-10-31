@@ -6,6 +6,8 @@ import { BREAKPOINTS, COLORS, FONTS, PADDING } from "@constants";
 import TestimonialPicture from "./TestimonialPicture";
 import { Title } from "@common";
 
+import { CircleIcon } from "@assets";
+
 const TestimonialSection = () => {
    return (
       <TestimonialSectionWrapper>
@@ -34,12 +36,16 @@ const TestimonialSection = () => {
             </div>
          </div>
          <TestimonialPicture />
+
+         <CircleIcon id="circle1" />
       </TestimonialSectionWrapper>
    );
 }
 
 
 const TestimonialSectionWrapper = styled.section`
+   position: relative;
+
    width: 100%;
    padding: ${PADDING.sectionBlock} 0px;
    scroll-snap-align: start;
@@ -74,6 +80,11 @@ const TestimonialSectionWrapper = styled.section`
       color: ${COLORS.secondaryText};
    }
 
+   #circle1 {
+      left: -5%;
+      top: 45%;
+      zoom: 0.5;
+   }
 
    @media screen and ${BREAKPOINTS.lg} {
       .left-container {

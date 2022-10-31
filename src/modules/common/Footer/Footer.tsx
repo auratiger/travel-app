@@ -75,6 +75,8 @@ const FooterWrapper = styled.footer`
    background-color: ${COLORS.background};
    box-shadow: ${SHADOWS.md};
 
+   margin-top: ${PADDING.sectionBlock};
+
    .container {
       padding-block: 2rem;
       display: flex;
